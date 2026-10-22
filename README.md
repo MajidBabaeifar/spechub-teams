@@ -15,6 +15,7 @@ derived_from:
 # Teams
 
 Users group into teams with roles. Roles and membership follow Cal.com; invites, ownership and removal are designed here.
+Not affiliated with or endorsed by Cal.com, Inc. The name is used only to credit the source.
 
 | Area | Prefix | Covers |
 |---|---|---|
