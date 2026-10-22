@@ -26,6 +26,7 @@ Users group into teams with roles; apps attach their own resources and permissio
 | TEAM-14 | Moving a resource to another team needs admin+ in both teams; members of the old team lose access at once. | admin of source only → 403 |
 | TEAM-15 | When a membership ends, every requiring spec's on-member-removed rules (e.g. unassign) run before access ends, in the same operation. | remove member → their assignments cleared |
 | TEAM-16 | Reserved slugs (`app`, `api`, `admin`, `login`, `signup`, `settings`, `static`, `www`, plus any a requiring spec adds) are refused; a deleted team's slug is not reusable for 30 days. | slug `api` → refused |
+| TEAM-17 | A `viewer` can't be made responsible for a resource (assignee, owner, lead) in any requiring spec; demoting a member to viewer clears those roles as in TEAM-15. | assign viewer → refused |
 
 ## Out of scope
 
