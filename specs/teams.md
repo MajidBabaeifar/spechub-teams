@@ -21,7 +21,7 @@ Users group into teams with roles; apps attach their own resources and permissio
 | TEAM-9 | Deleting a team deletes its resources; deleting a user removes their memberships (refused while they're a sole owner). | sole owner deletes account → refused |
 | TEAM-10 | Apps extend TEAM-6 with their own resource rows (resource, action, minimum role); the default for unlisted actions is admin+; a row's minimum role may be `viewer` only for reading or for actions the requiring spec names as viewer-safe (e.g. commenting). | manual: requiring spec lists its rows |
 | TEAM-11 | `viewer` never creates, updates or deletes team resources unless a TEAM-10 row explicitly allows that action for viewers. | viewer edits a record → 403 |
-| TEAM-12 | Team setting `require_2fa` (default false, owner sets it): members without 2FA (`@spechub/auth:AUTH-9`) get 403 `2fa_required` on every team resource until they enable it. | require_2fa on, member without 2FA → 403 |
+| TEAM-12 | Team setting `require_2fa` (default false, owner sets it): members without 2FA (`@specfork/auth:AUTH-9`) get 403 `2fa_required` on every team resource until they enable it. | require_2fa on, member without 2FA → 403 |
 | TEAM-13 | Team `time_zone` (IANA), default the creating owner's; requiring specs use it as the default for team resources. | new team → owner's zone |
 | TEAM-14 | Moving a resource to another team needs admin+ in both teams; members of the old team lose access at once. | admin of source only → 403 |
 | TEAM-15 | When a membership ends, every requiring spec's on-member-removed rules (e.g. unassign) run before access ends, in the same operation. | remove member → their assignments cleared |
