@@ -3,6 +3,7 @@ specfork: 1
 name: "@specfork/teams"
 summary: Teams with member/admin/owner roles, email invites, and permission rows other specs extend.
 license: CC-BY-4.0
+tags: [base, accounts]
 requires:
   "@specfork/auth": "^0.3.0"
 derived_from:
